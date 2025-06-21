@@ -1,219 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NeuroConnect | Youth Neuroscience Initiative</title>
-
-  <!-- Google Fonts: Bree Serif & Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-
+  <meta charset="UTF-8">
+  <title>Neuroscience Encompassed - Title Page</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* ----------  GLOBAL ---------- */
-    :root {
-      --brand-navy: #0a2540;
-      --brand-blue: #0066cc;
-      --bg-light:  #f7f9fc;
-      --text-dark: #1e1e2f;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--text-dark);
-      background: var(--bg-light);
-      line-height: 1.6;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Bree Serif', serif;
-      font-weight: 400;
-      color: var(--brand-navy);
-    }
-
-    a { text-decoration: none; }
-
-    /* ----------  HEADER ---------- */
-    header {
-      background: var(--brand-navy);
-      padding: 18px 40px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h2 {
-      color: #fff;
-      font-size: 1.6rem;
-    }
-
-    nav a {
-      color: #fff;
-      margin-left: 26px;
-      font-weight: 500;
-      transition: opacity .25s;
-    }
-
-    nav a:hover { opacity: .8; }
-
-    /* ----------  HERO ---------- */
-    .hero {
-      text-align: center;
-      padding: 90px 20px 80px;
-      background: radial-gradient(circle at top left, #e1f5fe 0%, #f3e5f5 100%);
-    }
-
-    .hero h1 { font-size: clamp(2.5rem, 6vw, 3.5rem); }
-
-    .hero p {
-      font-size: 1.15rem;
-      margin: 15px auto 35px;
-      max-width: 680px;
-    }
-
-    .btn {
-      background: var(--brand-blue);
-      color: #fff;
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-weight: 500;
-      display: inline-block;
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-    }
-
-    /* ----------  SECTIONS ---------- */
-    section {
-      padding: 70px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 35px;
-    }
-
-    /* ----- Programs Grid ----- */
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
+      min-height: 100vh;
+      flex-direction: column;
       justify-content: center;
-      gap: 30px;
+      align-items: center;
+      background: linear-gradient(135deg, #e0e7ef 0%, #f8fafc 100%);
     }
-
-    .card {
+    .title-container {
       background: #fff;
-      width: 270px;
-      padding: 26px 22px 34px;
+      padding: 3em 4em;
       border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(10,37,64,0.12);
+      box-shadow: 0 4px 24px rgba(25,50,77,0.15);
       text-align: center;
     }
-
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 1.25rem;
+    .main-title {
+      font-size: 2.8em;
+      color: #19324d;
+      margin-bottom: 0.3em;
+      letter-spacing: 2px;
     }
-
-    /* ----------  FOOTER ---------- */
-    footer {
-      background: var(--brand-navy);
-      color: #fff;
-      text-align: center;
-      padding: 24px 12px;
-      font-size: .9rem;
+    .subtitle {
+      font-size: 1.3em;
+      color: #284b6e;
+      margin-bottom: 1.5em;
     }
-
-    /* ----------  RESPONSIVE ---------- */
-    @media (max-width: 700px) {
-      nav a { margin-left: 16px; font-size: .9rem; }
-      .card { width: 88%; }
+    .authors {
+      font-size: 1.1em;
+      color: #444;
+      margin-bottom: 2em;
+    }
+    .date {
+      font-size: 1em;
+      color: #888;
+    }
+    @media (max-width: 600px) {
+      .title-container {
+        padding: 2em 1em;
+      }
+      .main-title {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
-
 <body>
-
-  <!-- ======= HEADER ======= -->
-  <header>
-    <h2>NeuroConnect</h2>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="programs.html">Programs</a>
-      <a href="join.html">Join</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <!-- ======= HERO ======= -->
-  <section class="hero">
-    <h1>Empowering Youth<br>Through Brain Science</h1>
-    <p>NeuroConnect is a student-led neuroscience initiative dedicated to education, outreach, and innovation. Join us on a journey to explore the wonders of the brain!</p>
-    <a href="join.html" class="btn">Get Involved</a>
-  </section>
-
-  <!-- ======= ABOUT PREVIEW ======= -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p style="text-align:center; max-width:760px; margin:auto;">
-      We are passionate about making neuroscience accessible for students worldwide. Through live courses, mentorship, creative research, and global outreach, we connect young minds with the marvels of the nervous system.
-    </p>
-  </section>
-
-  <!-- ======= PROGRAMS ======= -->
-  <section id="programs">
-    <h2>Our Programs</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Neuro101</h3>
-        <p>A beginner-friendly course that guides students through the fundamentals of brain science.</p>
-      </div>
-      <div class="card">
-        <h3>Youth Research Hub</h3>
-        <p>Collaborative student-led neuroscience projects mentored by researchers and grad students.</p>
-      </div>
-      <div class="card">
-        <h3>NeuroArt Challenge</h3>
-        <p>Where creativity meets science—visual storytelling inspired by neurons, synapses, and cognition.</p>
-      </div>
+  <div class="title-container">
+    <div class="main-title">Neuroscience Encompassed</div>
+    <div class="subtitle">Exploring the Brain, Inspiring Minds</div>
+    <div class="authors">
+      Presented by the Neuroscience Encompassed Team
     </div>
-  </section>
-
-  <!-- ======= JOIN ======= -->
-  <section id="join">
-    <h2>Join Us</h2>
-    <p style="text-align:center; max-width:720px; margin:auto;">
-      Interested in contributing to neuroscience outreach? Become a volunteer, ambassador, or part of our core team.
-    </p>
-    <div style="text-align:center; margin-top:30px;">
-      <a href="https://forms.gle/YOURFORMURL" class="btn">Apply Now</a>
+    <div class="date">
+      June 2025
     </div>
-  </section>
-
-  <!-- ======= CONTACT ======= -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p style="text-align:center; max-width:640px; margin:auto;">
-      Have questions or project ideas? Reach out at
-      <a href="mailto:hello@neuroconnect.org">hello@neuroconnect.org</a>.
-    </p>
-  </section>
-
-  <!-- ======= FOOTER ======= -->
-  <footer>
-    &copy; 2025 NeuroConnect | Youth Neuroscience Initiative
-  </footer>
-
+  </div>
 </body>
 </html>
