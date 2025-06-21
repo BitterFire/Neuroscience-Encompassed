@@ -1,0 +1,76 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  background: #f8fafc;
+  color: #222;
+}
+header {
+  background: #19324d;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0 0 0.5em 0;
+  font-size: 2.2em;
+  letter-spacing: 2px;
+}
+nav {
+  margin-bottom: 0.5em;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1em;
+  font-weight: 500;
+  font-size: 1.1em;
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+nav a.active, nav a:hover {
+  background: #284b6e;
+}
+main {
+  max-width: 700px;
+  margin: 2em auto;
+  background: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(25,50,77,0.08);
+}
+.hero {
+  text-align: center;
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #284b6e;
+  color: #fff;
+  margin-top: 2em;
+  font-size: 1em;
+}
+form {
+  margin-top: 1.5em;
+}
+input, select, textarea, button {
+  font-size: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid #ccd6df;
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  background: #19324d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #284b6e;
+}
