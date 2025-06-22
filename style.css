@@ -1,159 +1,139 @@
-/* Load fonts in your HTML <head>:
-<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuroConnect | Youth Neuroscience Initiative</title>
 
-:root {
-  --brand-dark: #0f172a;
-  --brand-blue: #2563eb;
-  --brand-blue-dark: #1e40af;
-  --accent-blue: #60a5fa;
-  --bg-light: #f1f5f9;
-  --white: #ffffff;
-  --text-dark: #1e293b;
-  --text-muted: #475569;
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
 
-/* ---------- Base ---------- */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: var(--bg-light);
-  color: var(--text-dark);
-  line-height: 1.7;
-}
+  <!-- Link to your custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-/* ---------- Header ---------- */
-header {
-  background: linear-gradient(to right, var(--brand-blue), var(--brand-blue-dark));
-  color: var(--white);
-  padding: 1.5em 1em;
-  text-align: center;
-  font-family: 'Bree Serif', serif;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
+  <!-- Icons + Animation Libs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-header h1 {
-  margin: 0;
-  font-size: 2.4em;
-  letter-spacing: 1.5px;
-}
+  <style>
+    .hero-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 2em;
+    }
+    .cta-section {
+      background: linear-gradient(to right, #dbeafe, #e0f2fe);
+      padding: 2em;
+      border-radius: 10px;
+      text-align: center;
+      margin: 3em 0;
+    }
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+      margin-top: 2em;
+    }
+    .program-card {
+      background: white;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .program-card h3 {
+      margin-top: 0.5em;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
 
-nav {
-  margin-top: 1em;
-}
+  <!-- ======= Header ======= -->
+  <header>
+    <h1>NeuroConnect</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-nav a {
-  color: var(--white);
-  text-decoration: none;
-  margin: 0 1em;
-  font-weight: 500;
-  font-size: 1.1em;
-  padding: 0.4em 0.75em;
-  border-radius: 6px;
-  transition: background 0.25s ease, transform 0.2s;
-}
+  <!-- ======= Main Content ======= -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-up">
+      <img src="https://source.unsplash.com/1200x400/?brain,science" alt="Brain Science" class="hero-image">
+      <h2>Empowering Youth Through Brain Science</h2>
+      <p>We’re a student-led initiative making neuroscience accessible to youth around the world. Learn, create, and collaborate with passionate minds like yours.</p>
+      <a href="join.html">
+        <button>Join the Movement</button>
+      </a>
+    </section>
 
-nav a.active,
-nav a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-1px);
-}
+    <!-- About Preview -->
+    <section data-aos="fade-up">
+      <h2>What is NeuroConnect?</h2>
+      <p>NeuroConnect is dedicated to engaging students in the fascinating world of neuroscience. We offer hands-on learning, mentorship, and a supportive community that believes in rethinking how brain science is taught and shared with youth.</p>
+    </section>
 
-/* ---------- Main Content ---------- */
-main {
-  max-width: 750px;
-  margin: 3em auto;
-  background: var(--white);
-  padding: 2.5em;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
-}
+    <!-- Programs Preview -->
+    <section data-aos="fade-up">
+      <h2>Our Core Programs</h2>
+      <div class="program-grid">
+        <div class="program-card">
+          <i class="fas fa-brain fa-2x"></i>
+          <h3>Neuro101</h3>
+          <p>Beginner-friendly intro course covering neurons, systems, and cognition basics.</p>
+        </div>
+        <div class="program-card">
+          <i class="fas fa-flask fa-2x"></i>
+          <h3>Youth Research Hub</h3>
+          <p>Join collaborative neuroscience research guided by university mentors.</p>
+        </div>
+        <div class="program-card">
+          <i class="fas fa-palette fa-2x"></i>
+          <h3>NeuroArt Challenge</h3>
+          <p>Mix creativity with brain science in our monthly neuroscience art prompts.</p>
+        </div>
+      </div>
+    </section>
 
-.hero {
-  text-align: center;
-  font-family: 'Bree Serif', serif;
-  margin-bottom: 2em;
-}
+    <!-- Call to Action -->
+    <section class="cta-section" data-aos="fade-up">
+      <h2>Ready to Dive Into the Brain?</h2>
+      <p>Whether you're an artist, a scientist, or just curious — there's a place for you here.</p>
+      <a href="join.html">
+        <button>Apply Now</button>
+      </a>
+    </section>
 
-.hero h2 {
-  font-size: 2em;
-  margin-bottom: 0.5em;
-}
+    <!-- Contact Preview + Form -->
+    <section data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p>Have questions, ideas, or want to collaborate? Email us at <a href="mailto:hello@neuroconnect.org">hello@neuroconnect.org</a></p>
 
-.hero p {
-  color: var(--text-muted);
-  font-size: 1.1em;
-}
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message..."></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
-/* ---------- Form Styles ---------- */
-form {
-  margin-top: 2em;
-}
+  <!-- ======= Footer ======= -->
+  <footer>
+    &copy; 2025 NeuroConnect | Youth Neuroscience Initiative
+  </footer>
 
-input,
-select,
-textarea {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1em;
-  padding: 0.75em;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
-  width: 100%;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  background: #ffffff;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
-  transition: border 0.2s;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: var(--brand-blue);
-  outline: none;
-}
-
-button {
-  background: var(--brand-blue);
-  color: var(--white);
-  font-weight: 600;
-  padding: 0.75em 1.5em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-button:hover {
-  background: var(--brand-blue-dark);
-  transform: translateY(-1px);
-}
-
-/* ---------- Footer ---------- */
-footer {
-  text-align: center;
-  padding: 1.5em 1em;
-  background: var(--brand-dark);
-  color: var(--white);
-  font-size: 0.95em;
-  margin-top: 3em;
-}
-
-/* ---------- Responsive ---------- */
-@media screen and (max-width: 640px) {
-  nav a {
-    display: inline-block;
-    margin: 0.5em 0.5em;
-    font-size: 1em;
-  }
-
-  main {
-    margin: 1.5em 1em;
-    padding: 2em 1.5em;
-  }
-
-  header h1 {
-    font-size: 1.9em;
-  }
-}
-
+  <script>AOS.init();</script>
+</body>
+</html>
